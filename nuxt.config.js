@@ -13,6 +13,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' },
       { rel: 'stylesheet', href: 'https://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css' },
+      { rel: 'stylesheet', href: '/css/main.css' },
     ]
   },
   /*
