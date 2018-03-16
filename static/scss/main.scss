@@ -746,7 +746,157 @@ body {
       color: #9b9b9b;
     }
   }
-
+  .crmRight__title{
+    .crmRight__title-close{
+      font-size: 20px;
+      color: #303133;
+      transition: 0.3s ease;
+      &:hover{
+        color: #409eff;
+      }
+    }
+  }
+  /*----Отзывы-----*/
+  .crmRight__date{
+    .el-date-editor{
+      width: 435px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: solid 1px #dcdfe6;
+    }
+    button{
+      margin-left: 10px;
+    }
+  }
+  .crmTable-auto{
+    font-size: 12px;
+    color: #888888;
+  }
+  /*-----Страница настроек-----*/
+  .crmRight__settings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .crmRight__setting-limints, .crmRight__setting-other{
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+  .crmRight__setting-title{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #303133;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ebeef5;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .crmRight__setting-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 32px;
+  }
+  .setting__item-number{
+    margin-right: 15px;
+  }
+  .setting__item-title{
+    font-size: 13px;
+    text-align: left;
+    color: #606266;
+  }
+  .setting__item-switch{
+    margin-left: auto;
+  }
+  .setting__item-select{
+    margin-left: 15px;
+    flex-grow: 2;
+    .el-select{
+      width: 100%;
+    }
+  }
+  .setting__item-button{
+    margin-left: auto;
+  }
+  .crmRight__setting-sale, .crmRight__setting-foto, .crmRight__setting-panel{
+    flex-basis: calc(33.3333% - 20px);
+    margin-bottom: 20px;
+  }
+  .crmRight__setting-item{
+    .el-checkbox-group{
+      .el-checkbox{
+        margin-left: 0;
+      }
+    }
+  }
+  .crmRight__setting-sale, .crmRight__setting-foto{
+    .crmRight__setting-item{
+      height: auto;
+    }
+  }
+  .crmRight__setting-publick{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .crmRight__setting-title{
+      flex-basis: 100%;
+    }
+    .crmRight__setting-item{
+      flex-basis: calc(50% - 15px);
+    }
+  }
+  /*----Страница заявки на кредит----*/
+  .crmTable__id{
+    font-size: 14px;
+    font-weight: bold;
+    color: #606266;
+  }
+  .crmTable-model{
+    font-size: 14px;
+    font-weight: 600;
+    color: #606266;
+    span{
+      font-weight: normal;
+      color: #409eff;
+    }
+  }
+  .crmTable__foto{
+    display: flex;
+    align-items: center;
+  }
+  .crmTable__foto-img{
+    width: 100%;
+    height: 100%;
+  }
+  /*----Заявка на выкуп----*/
+  .crmTable__id{
+    font-size: 14px;
+    font-weight: bold;
+    color: #606266;
+  }
+  .crmTable-model{
+    font-size: 14px;
+    font-weight: 600;
+    color: #606266;
+    span{
+      font-weight: normal;
+      color: #409eff;
+    }
+  }
+  .crmTable__foto{
+    display: flex;
+    align-items: center;
+  }
+  .crmTable__foto-img{
+    width: 100%;
+    height: 100%;
+  }
 }
 /*---POPOVER----*/
 .el-dropdown-menu {
@@ -1035,15 +1185,6 @@ body {
     }
     .contentInfo__inputs{
       display: flex;
-      .el-form-item{
-        flex-grow: 2;
-        .el-select{
-          width: 100%;
-        }
-      }
-      .el-form-item:not(:last-child){
-        margin-right: 30px;
-      }
       .contentInfo__input-title{
         font-size: 13px;
         color: #606266;

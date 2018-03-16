@@ -209,7 +209,7 @@
             <div class="crmRight__setting-item">
               <div class="setting__item-title">Главная страница сайта:</div>
               <div class="setting__item-select">
-                <el-select v-model="value8" filterable placeholder="Select">
+                <el-select v-model="value8" filterable placeholder="Select" size="small">
                   <el-option
                     v-for="item in options"
                     :key="item.value"
@@ -241,6 +241,106 @@
               <div class="setting__item-title">Auto XML</div>
               <div class="setting__item-button">
                 <el-button size="small" icon="el-icon-refresh" type="info" plain></el-button>
+              </div>
+            </div>
+          </div>
+          <div class="crmRight__setting crmRight__setting-sale">
+            <div class="crmRight__setting-title">Дни скидок</div>
+            <div class="crmRight__setting-item">
+              <el-checkbox-group>
+                <el-checkbox label="Понедельник"></el-checkbox>
+                <el-checkbox label="Вторник"></el-checkbox>
+                <el-checkbox label="Среда"></el-checkbox>
+                <el-checkbox label="Четверг"></el-checkbox>
+                <el-checkbox label="Пятница"></el-checkbox>
+                <el-checkbox label="Суббота"></el-checkbox>
+                <el-checkbox label="Воскресенье"></el-checkbox>
+              </el-checkbox-group>
+            </div>
+          </div>
+          <div class="crmRight__setting crmRight__setting-foto">
+            <div class="crmRight__setting-title">Менять фото</div>
+            <div class="crmRight__setting-item">
+              <el-checkbox-group>
+                <el-checkbox label="Понедельник"></el-checkbox>
+                <el-checkbox label="Вторник"></el-checkbox>
+                <el-checkbox label="Среда"></el-checkbox>
+                <el-checkbox label="Четверг"></el-checkbox>
+                <el-checkbox label="Пятница"></el-checkbox>
+                <el-checkbox label="Суббота"></el-checkbox>
+                <el-checkbox label="Воскресенье"></el-checkbox>
+              </el-checkbox-group>
+            </div>
+          </div>
+          <div class="crmRight__setting crmRight__setting-panel">
+            <div class="crmRight__setting-title">Остальное</div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Поднять  в списке всех объявлений</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>
+            </div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Объявления без фото в начало списка</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>
+            </div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Сменить пользователя</div>
+              <div class="setting__item-button">
+                <el-button size="small" icon="el-icon-refresh" type="info" plain></el-button>
+              </div>
+            </div>
+          </div>
+          <div class="crmRight__setting crmRight__setting-publick">
+            <div class="crmRight__setting-title">Настройки публикации</div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">При выборе поднять марку вверх</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>
+            </div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Показать объявления без фотографий</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>
+            </div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Показать объявления без фотографий</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>
+            </div>
+            <div class="crmRight__setting-item">
+              <div class="setting__item-title">Показать объявления без фотографий</div>
+              <div class="setting__item-switch">
+                <el-switch
+                  v-model="value2"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
               </div>
             </div>
           </div>
@@ -292,48 +392,5 @@
 </script>
 
 <style scoped lang="scss">
-  .crmRight__settings{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .crmRight__setting-limints, .crmRight__setting-other{
-    flex-basis: calc(50% - 15px);
-    margin-bottom: 20px;
-  }
-  .crmRight__setting-title{
-    font-size: 14px;
-    font-weight: 600;
-    text-align: left;
-    color: #303133;
-    height: 40px;
-    border-radius: 4px;
-    background-color: #ebeef5;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .crmRight__setting-item{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .setting__item-title{
-    font-size: 13px;
-    text-align: left;
-    color: #606266;
-    margin-left: 15px;
-  }
-  .setting__item-switch{
-    margin-left: auto;
-  }
-  .setting__item-select{
-    margin-left: 15px;
-    flex-grow: 2;
-    .el-select{
-      width: 100%;
-    }
-  }
+
 </style>
