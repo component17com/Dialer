@@ -1274,6 +1274,284 @@ body {
       }
     }
   }
+  .contentInfo-salon {
+
+    .contentInfo__inputs {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .el-form-item {
+        flex-basis: calc(33.3333% - 15px);
+        .el-select {
+          width: 100%;
+        }
+      }
+    }
+    .contentInfo__time {
+      display: flex;
+      align-items: center;
+      flex-basis: calc(33.333333% - 15px);
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .contentInfo__time-title {
+        line-height: 1.5;
+        font-size: 13px;
+        color: #606266;
+      }
+      .el-form-item {
+        flex-basis: calc(50% - 5px);
+        .el-date-editor {
+          width: 100%;
+        }
+      }
+    }
+    .contentInfo__dopInfo {
+      flex-basis: 100%;
+      textarea {
+        margin-top: 5px;
+        height: 78px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: solid 1px #c0c4cc;
+        resize: none;
+      }
+    }
+  }
+  .contentInfo__newDepartment {
+    .contentInfo__newDepartment-button {
+      button {
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: dashed 1px #cccccc;
+        font-size: 14px;
+        font-weight: 600;
+        color: #888888;
+        padding: 0;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .mdi {
+          font-size: 16px;
+          color: #888888;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  .contentInfo__newDepartment-form {
+    border-radius: 4px;
+    background-color: #ebeef5;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .newDepartment__form-time {
+    display: flex;
+    flex-basis: 100%;
+    .el-form-item{
+      margin-right: 10px;
+    }
+  }
+  .newDepartment__form-name {
+    flex-basis: 100%;
+  }
+  .newDepartment__form-check {
+    flex-basis: 100%;
+  }
+  .newDepartment__form-tel, .newDepartment__form-mail {
+    flex-basis: calc(50% - 15px);
+    .form__tel-inputs{
+      display: flex;
+    }
+  }
+  .contentInfo__department {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .contentInfo__department-titles{
+    flex-basis: 100%;
+    .el-form-item__content{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .contentInfo__department-check {
+    flex-basis: 100%;
+  }
+  .department__time{
+    flex-basis: 100%;
+    display: flex;
+  }
+  .department__form-mail, .department__form-tel {
+    flex-basis: calc(50% - 15px);
+    .form__tel-inputs{
+      display: flex;
+    }
+  }
+  .contentInfo__newSite-form{
+    border-radius: 4px;
+    background-color: #ebeef5;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .newSite__form-select{
+    flex-basis: 100%;
+  }
+  .newSite__form-info{
+    flex-basis: 100%;
+    display: flex;
+  }
+  .newSite__form-textarea{
+    flex-basis: 100%;
+  }
+  .contentInfo__site-form{
+    margin-top: 20px;
+  }
+  .site__titles{
+    display: flex;
+    align-items: center;
+  }
+  .form__tel-titles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .form__tel-title{
+      font-size: 14px;
+      font-weight: 600;
+      color: #303133;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      font-size: 12px;
+      color: #8c939d;
+    }
+  }
+  .newDepartment__form-check{
+    .el-form-item{
+      margin-bottom: 0;
+    }
+  }
+  .newDepartment__form-tel{
+    .el-form-item{
+      margin-bottom: 5px;
+    }
+  }
+  .newDepartment__form-mail{
+    .el-form-item{
+      margin-bottom: 5px;
+    }
+  }
+  .contentInfo__department-check{
+    .el-form-item{
+      margin-bottom: 0;
+    }
+  }
+  .form__tel-input:not(:last-child){
+    margin-right: 10px;
+  }
+  .newDepartment__form-buttons{
+    margin-top: 15px;
+  }
+  .contentInfo__department{
+    margin-bottom: 20px;
+    .contentInfo__department-titles{
+      display: flex;
+      align-items: center;
+      .el-form-item{
+        margin-bottom: 10px;
+      }
+      .department__title{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #409eff;
+        text-transform: uppercase;
+      }
+      button{
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        margin-left: 10px;
+        color: #888888;
+        font-size: 14px;
+      }
+    }
+    .department__form-tel, .department__form-mail{
+      .el-form-item{
+        margin-bottom: 0;
+      }
+    }
+    .contentInfo__time{
+      margin-right: 10px;
+    }
+    .form__tel-titles{
+      .form__tel-title{
+        font-size: 13px;
+        font-weight: normal;
+        color: #606266;
+        line-height: 1.5;
+      }
+    }
+  }
+  .contentInfo__newSite-form{
+    .el-select{
+      width: 100%;
+    }
+    .newSite__form-info{
+      justify-content: space-between;
+      .el-form-item{
+        flex-basis: calc(33.333% - 10px);
+      }
+    }
+    textarea{
+      height: 78px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: solid 1px #c0c4cc;
+      resize: none;
+    }
+  }
+  .contentInfo__site-form{
+    .site__titles{
+      align-items: flex-end;
+      margin-bottom: 10px;
+      .site__titles-title{
+        font-size: 14px;
+        color: #409eff;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      button{
+        padding: 0;
+        margin-left: 10px;
+        border: none;
+        background-color: transparent;
+        color: #888888;
+      }
+    }
+    .newSite__form-info{
+      justify-content: space-between;
+      .el-form-item{
+        flex-basis: calc(33.333% - 10px);
+      }
+    }
+    textarea{
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: solid 1px #c0c4cc;
+      resize: none;
+    }
+  }
   /*-----Сотрудники----*/
   .adminContent__buttons{
     display: flex;

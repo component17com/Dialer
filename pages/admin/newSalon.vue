@@ -280,8 +280,14 @@
                 </el-form-item>
                 <el-form-item>
                   <div class="form__tel-inputs">
-                    <el-input class="form__tel-input" size="small" placeholder="+7 ( ___ ) ___ __ __"></el-input>
                     <el-input class="form__tel-input" size="small" placeholder="Заголовок"></el-input>
+                    <el-input class="form__tel-input" size="small" placeholder="+7 ( ___ ) ___ __ __"></el-input>
+                  </div>
+                </el-form-item>
+                <el-form-item>
+                  <div class="form__tel-inputs">
+                    <el-input class="form__tel-input" size="small" placeholder="Заголовок"></el-input>
+                    <el-input class="form__tel-input" size="small" placeholder="+7 ( ___ ) ___ __ __"></el-input>
                   </div>
                 </el-form-item>
               </div>
@@ -293,8 +299,20 @@
                 </el-form-item>
                 <el-form-item>
                   <div class="form__tel-inputs">
-                    <el-input class="form__tel-input" size="small" placeholder="example@mail.com"></el-input>
                     <el-input class="form__tel-input" size="small" placeholder="Заголовок"></el-input>
+                    <el-input class="form__tel-input" size="small" placeholder="example@mail.com"></el-input>
+                  </div>
+                </el-form-item>
+                <el-form-item>
+                  <div class="form__tel-inputs">
+                    <el-input class="form__tel-input" size="small" placeholder="Заголовок"></el-input>
+                    <el-input class="form__tel-input" size="small" placeholder="example@mail.com"></el-input>
+                  </div>
+                </el-form-item>
+                <el-form-item>
+                  <div class="form__tel-inputs">
+                    <el-input class="form__tel-input" size="small" placeholder="Заголовок"></el-input>
+                    <el-input class="form__tel-input" size="small" placeholder="example@mail.com"></el-input>
                   </div>
                 </el-form-item>
               </div>
@@ -315,7 +333,7 @@
               <div class="newSite__form-select">
                 <el-form-item>
                   <div class="contentInfo__input">
-                    <div class="contentInfo__input-title">Название отдела</div>
+                    <div class="contentInfo__input-title">Выберите сайт</div>
                     <div class="contentInfo__input-input">
                       <el-select v-model="value" placeholder="Select">
                         <el-option>
@@ -424,6 +442,57 @@
             </div>
           </el-form>
 
+          <el-form>
+            <div class="contentInfo__site-form">
+              <div class="site__titles">
+                <div class="site__titles-title">Auto.ru</div>
+                <div class="site__titles-button">
+                  <el-button><i class="mdi mdi-pencil"></i></el-button>
+                </div>
+              </div>
+              <div class="newSite__form-info">
+                <el-form-item>
+                  <div class="contentInfo__input">
+                    <div class="contentInfo__input-title">Контактный телефон</div>
+                    <div class="contentInfo__input-input">
+                      <el-input size="small" placeholder="+7 ( ___ ) ___ __ __"></el-input>
+                    </div>
+                  </div>
+                </el-form-item>
+                <el-form-item>
+                  <div class="contentInfo__input">
+                    <div class="contentInfo__input-title">E-mail</div>
+                    <div class="contentInfo__input-input">
+                      <el-input size="small" placeholder="example@mail.com"></el-input>
+                    </div>
+                  </div>
+                </el-form-item>
+                <el-form-item>
+                  <div class="contentInfo__check">
+                    <div class="contentInfo__input-title">Персональные поля</div>
+                    <div class="contentInfo__input-check">
+                      <el-checkbox-group v-model="checkList">
+                        <el-checkbox label="Option A"></el-checkbox>
+                        <el-checkbox label="Option B"></el-checkbox>
+                        <el-checkbox label="Option C"></el-checkbox>
+                      </el-checkbox-group>
+                    </div>
+                  </div>
+                </el-form-item>
+              </div>
+              <div class="newSite__form-textarea">
+                <el-form-item>
+                  <div class="contentInfo__input">
+                    <div class="contentInfo__input-title">Дополнительная информация</div>
+                    <div class="contentInfo__input-input">
+                      <el-input size="small" type="textarea" placeholder="Введите текст"></el-input>
+                    </div>
+                  </div>
+                </el-form-item>
+              </div>
+            </div>
+          </el-form>
+
 
         </div>
       </div>
@@ -454,154 +523,14 @@
 </script>
 
 <style lang="scss">
-  .contentInfo-salon {
-
-    .contentInfo__inputs {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .el-form-item {
-        flex-basis: calc(33.3333% - 15px);
-        .el-select {
-          width: 100%;
-        }
-      }
-    }
-    .contentInfo__time {
-      display: flex;
-      align-items: center;
-      flex-basis: calc(33.333333% - 15px);
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .contentInfo__time-title {
-        line-height: 1.5;
-        font-size: 13px;
-        color: #606266;
-      }
-      .el-form-item {
-        flex-basis: calc(50% - 5px);
-        .el-date-editor {
-          width: 100%;
-        }
-      }
-    }
-    .contentInfo__dopInfo {
-      flex-basis: 100%;
-      textarea {
-        margin-top: 5px;
-        height: 78px;
-        border-radius: 4px;
-        background-color: #ffffff;
-        border: solid 1px #c0c4cc;
-        resize: none;
-      }
-    }
+  /*---scoped----*/
+  .contentInfo__input-title, .contentInfo__check-title, .contentInfo__time-title, .form__tel-title{
+    line-height: 1.5;
+    font-size: 13px;
+    color: #606266;
   }
-
-  .contentInfo__newDepartment {
-    .contentInfo__newDepartment-button {
-      button {
-        width: 100%;
-        height: 50px;
-        border-radius: 4px;
-        background-color: #ffffff;
-        border: dashed 1px #cccccc;
-        font-size: 14px;
-        font-weight: 600;
-        color: #888888;
-        padding: 0;
-        span {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .mdi {
-          font-size: 16px;
-          color: #888888;
-          margin-right: 6px;
-        }
-      }
-    }
-  }
-
-  .contentInfo__newDepartment-form {
-    border-radius: 4px;
-    background-color: #ebeef5;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .newDepartment__form-time {
-    display: flex;
-    flex-basis: 100%;
-  }
-
-  .newDepartment__form-name {
-    flex-basis: 100%;
-  }
-
-  .newDepartment__form-check {
-    flex-basis: 100%;
-  }
-
-  .newDepartment__form-tel, .newDepartment__form-mail {
-    flex-basis: calc(50% - 15px);
-    .form__tel-inputs{
-      display: flex;
-    }
-  }
-
-  .contentInfo__department {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  .contentInfo__department-titles{
-    flex-basis: 100%;
-    .el-form-item__content{
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .contentInfo__department-check {
-    flex-basis: 100%;
-  }
-  .department__time{
-    flex-basis: 100%;
-    display: flex;
-  }
-  .department__form-mail, .department__form-tel {
-    flex-basis: calc(50% - 15px);
-    .form__tel-inputs{
-      display: flex;
-    }
-  }
-
-  .contentInfo__newSite-form{
-    border-radius: 4px;
-    background-color: #ebeef5;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .newSite__form-select{
-    flex-basis: 100%;
-  }
-  .newSite__form-info{
-    flex-basis: 100%;
-    display: flex;
-  }
-  .newSite__form-textarea{
-    flex-basis: 100%;
-  }
-  .contentInfo__site-form{
-    margin-top: 20px;
-  }
-  .site__titles{
+  .el-checkbox-group{
+    height: 32px;
     display: flex;
     align-items: center;
   }
