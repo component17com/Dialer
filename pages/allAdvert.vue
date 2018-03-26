@@ -129,41 +129,62 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Цена"
-              width="160px">
-              <template slot-scope="scope">
-                <div class="crmTable__name">{{ scope.row.price}}</div>
-              </template>
-            </el-table-column>
-            <el-table-column
               label="Марка / Модель">
               <template slot-scope="scope">
                 <div class="crmTable-model">{{ scope.row.model}} <span>{{ scope.row.year}}</span></div>
+                <div class="crmTable-modelInfo">{{ scope.row.modelInfo}}</div>
+                <div class="crmTable-modelKm">{{ scope.row.modelKm}} ,<span>{{ scope.row.modelBody}}</span></div>
+                <div class="crmTable-modelColor">
+                  <div class="crmTable-modelColorHEX"
+                       :style="`background-color: ${scope.row.modelColor}; border-color: ${scope.row.modelColor}`"></div>
+                  <span>{{ scope.row.modelColorName}}</span>
+                </div>
               </template>
             </el-table-column>
             <el-table-column
-              label="Покупатель">
+              label="Цена"
+              width="160px"
+              align="center">
               <template slot-scope="scope">
-                <div class="crmTable-year">{{ scope.row.name}}</div>
-                <div class="crmTable-volume">{{ scope.row.city}}</div>
+                <div class="crmTable__salePrice">{{ scope.row.salePrice}}</div>
+                <div class="crmTable__price">{{ scope.row.price}}</div>
               </template>
             </el-table-column>
             <el-table-column
-              label="Контакты">
+              label="Сайт"
+              align="center"
+            width="160px">
               <template slot-scope="scope">
-                <div class="crmTable-year">{{ scope.row.phone}}</div>
+                <nuxt-link to="/" class="crmTable-site">{{ scope.row.site}}</nuxt-link>
+              </template>
+            </el-table-column>
+            <el-table-column
+              label="Дата"
+            align="center"
+            width="220px">
+              <template slot-scope="scope">
+                <div class="crmTable-date">Добавлено: {{ scope.row.date}}</div>
+                <div class="crmTable-refresh">Обновлено: {{ scope.row.dateRef}} дней назад</div>
               </template>
             </el-table-column>
             <el-table-column
               label="Удалить"
               align="center"
-              width="80px">
+              width="120px">
               <template slot-scope="scope">
-                <el-button
-                  size="small"
-                  type="danger"
-                  icon="mdi mdi-delete">
-                </el-button>
+                <div class="crmTable-buttons">
+                  <el-button
+                    size="small"
+                    type="primary"
+                    icon="mdi mdi-chart-bar">
+                  </el-button>
+                  <el-button
+                    size="small"
+                    type="danger"
+                    icon="mdi mdi-delete">
+                  </el-button>
+                </div>
+
               </template>
             </el-table-column>
           </el-table>
@@ -198,28 +219,64 @@
         tableData: [{
           id: '999999',
           photo: './img/scoda.jpg',
-          price:'11 332 000 руб.',
+          price: '11 332 000 руб.',
+          salePrice: '332 000 руб.',
           model: 'Skoda Octavia',
-          name: 'Бабушкина Наталья Сергеевна',
-          city: '(Татарстан, Казань)',
+          modelInfo: 'III(C6) Рестайлинг 1,6 AT (110 л.с.)',
+          modelKm: '999 999 км',
+          modelBody: 'Седан',
+          modelColor: '#409eff',
+          modelColorName: 'Синий',
           phone: '+7 (999) 999-9999',
-          year:'2011',
+          date: '09.12.2017',
+          dateRef:'365',
+          site: 'auto.ru',
         }, {
           id: '999999',
           photo: './img/scoda.jpg',
-          price:'11 332 000 руб.',
-          name: 'Бабушкина Наталья Сергеевна',
-          city: '(Татарстан, Казань)',
+          price: '11 332 000 руб.',
+          salePrice: '332 000 руб.',
           model: 'Skoda Octavia',
+          modelInfo: 'III(C6) Рестайлинг 1,6 AT (110 л.с.)',
+          modelKm: '999 999 км',
+          modelBody: 'седан',
+          modelColor: '#ff3315',
+          modelColorName: 'Красный',
           phone: '+7 (999) 999-9999',
-          year:'2011',
+          date: '09.12.2017',
+          dateRef:'365',
+          site: 'avito.ru',
         }],
 
       };
+    },
+    mounted() {
+      let text = 'Привет';
+      let str1 = text + ' Мир ' + text;
+
+      let str2 = `${text} Мир ${text}`;
+
+      console.log(str2)
     }
   };
 </script>
 
 <style lang="scss">
+  .crmTable-modelColor {
+    display: flex;
+    align-items: center;
+  }
 
+  .crmTable-modelColorHEX {
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .crmTable-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>

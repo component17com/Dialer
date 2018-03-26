@@ -1,9 +1,14 @@
 <template>
   <div class="admin-container">
-    <div class="admin__left">
+    <div :class="menuClass">
+      <div class="admin__left-buttons">
+        <div class="admin__left-name">Перов Иван (админитстратор)</div>
+        <el-button class="admin__left-setting">Настройки</el-button>
+        <el-button class="admin__left-exit">Выйти</el-button>
+      </div>
       <div class="admin__left-title">Администрирование <br><span>АвтоЛидер</span></div>
       <div class="left__models">
-        <nuxt-link to="" class="left__model" v-for="item in 7" :key="item">Автосалоны</nuxt-link>
+        <nuxt-link to="" class="left__model" v-for="item in 70" :key="item">Автосалоны</nuxt-link>
         <nuxt-link to="" class="left__model">Сотрудники</nuxt-link>
         <nuxt-link to="" class="left__model">Справочник атомобилей</nuxt-link>
       </div>
@@ -15,6 +20,9 @@
         <el-button class="button-icon rheader__top-exit"><i class="mdi mdi-exit-to-app"></i></el-button>
       </div>
       <div class="right__header-buttons">
+        <div class="admin__left-button">
+          <el-button @click="adminChange()"><i class="mdi mdi-menu"></i></el-button>
+        </div>
         <div class="right__header-title">Автосалоны</div>
         <el-button class="rheader__buttons-new" size="small"><i class="mdi mdi-plus"></i>Добавить автосалон</el-button>
       </div>
@@ -61,6 +69,7 @@
           </el-table-column>
         </el-table>
       </div>
+
     </div>
   </div>
 </template>
@@ -69,6 +78,9 @@
   export default {
     data() {
       return {
+        menuClass: 'admin__left',
+        adminLeftOpen: false,
+        isCollapse: true,
         tableData: [{
           name: 'Tom',
           address: 'No. 189, Grove St, Los Angeles',
@@ -87,8 +99,26 @@
           contact: '2222'
         }]
       }
+    },
+    methods: {
+      adminChange(){
+        const TIMEOUT = 400;
+
+        if(this.adminLeftOpen){
+          this.menuClass = 'admin__left adminLeftClose'
+          this.adminLeftOpen = false;
+
+        }else{
+          this.menuClass = 'admin__left adminLeftOpen'
+          setTimeout(() => {
+            this.menuClass = 'admin__left adminLeftOpen adminLeftOver'
+            this.adminLeftOpen = true;
+          }, TIMEOUT);
+        }
+      }
     }
   }
+
 </script>
 
 <style lang="scss">

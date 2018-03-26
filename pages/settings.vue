@@ -257,6 +257,9 @@
                 <el-checkbox label="Воскресенье"></el-checkbox>
               </el-checkbox-group>
             </div>
+            <el-input placeholder="Введите скидку в процентах" size="small">
+              <template slot="append">%</template>
+            </el-input>
           </div>
           <div class="crmRight__setting crmRight__setting-foto">
             <div class="crmRight__setting-title">Менять фото</div>
