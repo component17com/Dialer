@@ -1,12 +1,13 @@
 <template>
   <div class="admin-container">
     <div :class="menuClass">
+      <div class="admin__left-title">Администрирование <br><span>АвтоЛидер</span></div>
       <div class="admin__left-buttons">
         <div class="admin__left-name">Перов Иван (админитстратор)</div>
-        <el-button class="admin__left-setting">Настройки</el-button>
-        <el-button class="admin__left-exit">Выйти</el-button>
+        <el-button type="text" class="admin__left-button">Настройки</el-button>
+        |
+        <el-button type="text" class="admin__left-exit">Выйти</el-button>
       </div>
-      <div class="admin__left-title">Администрирование <br><span>АвтоЛидер</span></div>
       <div class="left__models">
         <nuxt-link to="" class="left__model" v-for="item in 70" :key="item">Автосалоны</nuxt-link>
         <nuxt-link to="" class="left__model">Сотрудники</nuxt-link>
@@ -53,7 +54,8 @@
           </el-table-column>
           <el-table-column
             label="Действия"
-            align="center">
+            align="center"
+            width="140px">
             <template slot-scope="scope">
               <el-button
                 size="mini"

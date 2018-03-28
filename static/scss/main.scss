@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
 /*-----Новая заявка-----*/
 .crm-container {
   display: flex;
@@ -287,15 +288,15 @@ body {
       display: flex;
       align-items: center;
     }
-    .collapse__model-select{
+    .collapse__model-select {
       margin-bottom: 20px;
     }
-    .el-collapse-item__content{
+    .el-collapse-item__content {
       padding-top: 10px;
     }
   }
 
-  .optionLeft-alarm{
+  .optionLeft-alarm {
     margin-bottom: 20px;
   }
   /*----Титл и кнопка очистить----*/
@@ -691,7 +692,7 @@ body {
     border: none;
   }
   .crmRight__options {
-    .collapse__model-select{
+    .collapse__model-select {
       flex-grow: 2;
       width: 100%;
 
@@ -713,15 +714,15 @@ body {
     height: 30px;
     align-items: center;
   }
-  .crmRight__table{
+  .crmRight__table {
     margin-top: 20px;
     font-size: 14px;
     text-align: left;
     color: #303133;
     width: 99%;
-    .has-gutter{
-      tr{
-        th{
+    .has-gutter {
+      tr {
+        th {
           padding: 0;
           font-size: 12px;
           color: #606266;
@@ -729,16 +730,16 @@ body {
         }
       }
     }
-    button{
+    button {
       padding: 0;
       width: 30px;
       height: 30px;
     }
   }
-  .footer__pagination{
+  .footer__pagination {
     font-size: 14px;
     color: #9b9b9b;
-    .el-pagination{
+    .el-pagination {
       font-weight: normal;
       display: flex;
       align-items: center;
@@ -746,43 +747,43 @@ body {
       color: #9b9b9b;
     }
   }
-  .crmRight__title{
-    .crmRight__title-close{
+  .crmRight__title {
+    .crmRight__title-close {
       font-size: 20px;
       color: #303133;
       transition: 0.3s ease;
-      &:hover{
+      &:hover {
         color: #409eff;
       }
     }
   }
   /*----Отзывы-----*/
-  .crmRight__date{
-    .el-date-editor{
+  .crmRight__date {
+    .el-date-editor {
       width: 435px;
       border-radius: 4px;
       background-color: #ffffff;
       border: solid 1px #dcdfe6;
     }
-    button{
+    button {
       margin-left: 10px;
     }
   }
-  .crmTable-auto{
+  .crmTable-auto {
     font-size: 12px;
     color: #888888;
   }
   /*-----Страница настроек-----*/
-  .crmRight__settings{
+  .crmRight__settings {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .crmRight__setting-limints, .crmRight__setting-other{
+  .crmRight__setting-limints, .crmRight__setting-other {
     flex-basis: calc(50% - 15px);
     margin-bottom: 20px;
   }
-  .crmRight__setting-title{
+  .crmRight__setting-title {
     font-size: 14px;
     font-weight: 600;
     text-align: left;
@@ -796,108 +797,109 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  .crmRight__setting-item{
+  .crmRight__setting-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     height: 32px;
   }
-  .setting__item-number{
+  .setting__item-number {
     margin-right: 15px;
   }
-  .setting__item-title{
+  .setting__item-title {
     font-size: 13px;
     text-align: left;
     color: #606266;
   }
-  .setting__item-switch{
+  .setting__item-switch {
     margin-left: auto;
   }
-  .setting__item-select{
+  .setting__item-select {
     margin-left: 15px;
     flex-grow: 2;
-    .el-select{
+    .el-select {
       width: 100%;
     }
   }
-  .setting__item-button{
+  .setting__item-button {
     margin-left: auto;
   }
-  .crmRight__setting-sale, .crmRight__setting-foto, .crmRight__setting-panel{
+  .crmRight__setting-sale, .crmRight__setting-foto, .crmRight__setting-panel {
     flex-basis: calc(33.3333% - 20px);
     margin-bottom: 20px;
   }
-  .crmRight__setting-item{
-    .el-checkbox-group{
-      .el-checkbox{
+  .crmRight__setting-item {
+    .el-checkbox-group {
+      .el-checkbox {
         margin-left: 0;
       }
     }
   }
-  .crmRight__setting-sale, .crmRight__setting-foto{
-    .crmRight__setting-item{
+  .crmRight__setting-sale, .crmRight__setting-foto {
+    .crmRight__setting-item {
       height: auto;
     }
   }
-  .crmRight__setting-publick{
+  .crmRight__setting-publick {
     flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .crmRight__setting-title{
+    .crmRight__setting-title {
       flex-basis: 100%;
     }
-    .crmRight__setting-item{
+    .crmRight__setting-item {
       flex-basis: calc(50% - 15px);
     }
   }
   /*----Страница заявки на кредит----*/
-  .crmTable__id{
+  .crmTable__id {
     font-size: 14px;
     font-weight: bold;
     color: #606266;
   }
-  .crmTable-model{
+  .crmTable-model {
     font-size: 14px;
     font-weight: 600;
     color: #606266;
-    span{
+    span {
       font-weight: normal;
       color: #409eff;
     }
   }
-  .crmTable__foto{
+  .crmTable__foto {
     display: flex;
     align-items: center;
   }
-  .crmTable__foto-img{
+  .crmTable__foto-img {
     width: 100%;
     height: 100%;
   }
   /*----Заявка на выкуп----*/
-  .crmTable__id{
+  .crmTable__id {
     font-size: 14px;
     font-weight: bold;
     color: #606266;
   }
-  .crmTable-model{
+  .crmTable-model {
     font-size: 14px;
     font-weight: 600;
     color: #606266;
-    span{
+    span {
       font-weight: normal;
       color: #409eff;
     }
   }
-  .crmTable__foto{
+  .crmTable__foto {
     display: flex;
     align-items: center;
   }
-  .crmTable__foto-img{
+  .crmTable__foto-img {
     width: 100%;
     height: 100%;
   }
 }
+
 /*---POPOVER----*/
 .el-dropdown-menu {
   li {
@@ -924,11 +926,13 @@ body {
   }
 
 }
+
 /*----Админка-----*/
-*{
+* {
   font-family: 'Open Sans', sans-serif;
 }
-.admin-container{
+
+.admin-container {
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -1054,7 +1058,7 @@ body {
       margin-right: 10px;
     }
   }
-  .right__header-title{
+  .right__header-title {
     font-size: 22px;
     font-weight: 600;
     font-style: normal;
@@ -1083,14 +1087,14 @@ body {
       cursor: pointer;
     }
   }
-  .adminTable{
+  .adminTable {
     font-size: 14px;
     text-align: left;
     color: #303133;
-    width: 99.9%;
-    .has-gutter{
-      tr{
-        th{
+    width: calc(100% - 1px);
+    .has-gutter {
+      tr {
+        th {
           padding: 0;
           font-size: 12px;
           color: #606266;
@@ -1098,7 +1102,7 @@ body {
         }
       }
     }
-    button{
+    button {
       padding: 0;
       width: 30px;
       height: 30px;
@@ -1147,7 +1151,7 @@ body {
       }
     }
   }
-  .model__select-title{
+  .model__select-title {
     line-height: 1.5;
   }
   /*----Новый салон----*/
@@ -1180,78 +1184,78 @@ body {
         margin-right: 10px;
       }
     }
-    .contentInfo{
+    .contentInfo {
       margin-bottom: 10px;
     }
-    .contentInfo__inputs{
+    .contentInfo__inputs {
       display: flex;
-      .contentInfo__input-title{
+      .contentInfo__input-title {
         font-size: 13px;
         color: #606266;
         line-height: 1.5;
       }
     }
-    .contentInfo-row{
+    .contentInfo-row {
       display: flex;
       justify-content: space-between;
     }
-    .contentInfo__contacts, .contentInfo__credit{
+    .contentInfo__contacts, .contentInfo__credit {
       flex-basis: calc(50% - 15px);
     }
-    .contacts__input-row{
+    .contacts__input-row {
       display: flex;
       justify-content: space-between;
-      .el-form-item{
+      .el-form-item {
         flex-basis: calc(50% - 15px);
-        .el-date-editor{
+        .el-date-editor {
           width: 100%;
         }
       }
     }
-    .contentInfo-row{
-      .contacts__input-title{
+    .contentInfo-row {
+      .contacts__input-title {
         font-size: 13px;
         color: #606266;
       }
     }
-    .contentInfo__credit{
-      .contentInfo__inputs{
+    .contentInfo__credit {
+      .contentInfo__inputs {
         flex-wrap: wrap;
       }
-      .el-form-item{
+      .el-form-item {
         flex-basis: 100%;
       }
     }
-    .contentInfo__credit{
-      .contentInfo__inputs{
-        .el-form-item{
+    .contentInfo__credit {
+      .contentInfo__inputs {
+        .el-form-item {
           margin-right: 0;
         }
       }
     }
-    .el-form-item{
+    .el-form-item {
       margin-bottom: 20px;
     }
-    .contentInfo-salon{
-      .contentInfo-title{
+    .contentInfo-salon {
+      .contentInfo-title {
         margin-top: 15px;
       }
     }
-    .contentInfo__contacts{
-      .contacts__input-phones  {
-        input, input::placeholder{
+    .contentInfo__contacts {
+      .contacts__input-phones {
+        input, input::placeholder {
           font-size: 12px;
           font-weight: normal;
           color: #303133;
           opacity: 1;
         }
-        input:disabled{
+        input:disabled {
           background-color: rgba(235, 238, 245, 0.3);
         }
       }
     }
-    .dop__inputs{
-      textarea{
+    .dop__inputs {
+      textarea {
         height: 309px;
         border-radius: 4px;
         background-color: #ffffff;
@@ -1352,7 +1356,7 @@ body {
   .newDepartment__form-time {
     display: flex;
     flex-basis: 100%;
-    .el-form-item{
+    .el-form-item {
       margin-right: 10px;
     }
   }
@@ -1364,7 +1368,7 @@ body {
   }
   .newDepartment__form-tel, .newDepartment__form-mail {
     flex-basis: calc(50% - 15px);
-    .form__tel-inputs{
+    .form__tel-inputs {
       display: flex;
     }
   }
@@ -1374,9 +1378,9 @@ body {
     justify-content: space-between;
     margin-top: 20px;
   }
-  .contentInfo__department-titles{
+  .contentInfo__department-titles {
     flex-basis: 100%;
-    .el-form-item__content{
+    .el-form-item__content {
       display: flex;
       align-items: center;
     }
@@ -1384,17 +1388,17 @@ body {
   .contentInfo__department-check {
     flex-basis: 100%;
   }
-  .department__time{
+  .department__time {
     flex-basis: 100%;
     display: flex;
   }
   .department__form-mail, .department__form-tel {
     flex-basis: calc(50% - 15px);
-    .form__tel-inputs{
+    .form__tel-inputs {
       display: flex;
     }
   }
-  .contentInfo__newSite-form{
+  .contentInfo__newSite-form {
     border-radius: 4px;
     background-color: #ebeef5;
     padding: 10px;
@@ -1402,33 +1406,33 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .newSite__form-select{
+  .newSite__form-select {
     flex-basis: 100%;
   }
-  .newSite__form-info{
+  .newSite__form-info {
     flex-basis: 100%;
     display: flex;
   }
-  .newSite__form-textarea{
+  .newSite__form-textarea {
     flex-basis: 100%;
   }
-  .contentInfo__site-form{
+  .contentInfo__site-form {
     margin-top: 20px;
   }
-  .site__titles{
+  .site__titles {
     display: flex;
     align-items: center;
   }
-  .form__tel-titles{
+  .form__tel-titles {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .form__tel-title{
+    .form__tel-title {
       font-size: 14px;
       font-weight: 600;
       color: #303133;
     }
-    button{
+    button {
       border: none;
       background-color: transparent;
       padding: 0;
@@ -1436,48 +1440,48 @@ body {
       color: #8c939d;
     }
   }
-  .newDepartment__form-check{
-    .el-form-item{
+  .newDepartment__form-check {
+    .el-form-item {
       margin-bottom: 0;
     }
   }
-  .newDepartment__form-tel{
-    .el-form-item{
+  .newDepartment__form-tel {
+    .el-form-item {
       margin-bottom: 5px;
     }
   }
-  .newDepartment__form-mail{
-    .el-form-item{
+  .newDepartment__form-mail {
+    .el-form-item {
       margin-bottom: 5px;
     }
   }
-  .contentInfo__department-check{
-    .el-form-item{
+  .contentInfo__department-check {
+    .el-form-item {
       margin-bottom: 0;
     }
   }
-  .form__tel-input:not(:last-child){
+  .form__tel-input:not(:last-child) {
     margin-right: 10px;
   }
-  .newDepartment__form-buttons{
+  .newDepartment__form-buttons {
     margin-top: 15px;
   }
-  .contentInfo__department{
+  .contentInfo__department {
     margin-bottom: 20px;
-    .contentInfo__department-titles{
+    .contentInfo__department-titles {
       display: flex;
       align-items: center;
-      .el-form-item{
+      .el-form-item {
         margin-bottom: 10px;
       }
-      .department__title{
+      .department__title {
         font-size: 14px;
         font-weight: 600;
         line-height: 1.5;
         color: #409eff;
         text-transform: uppercase;
       }
-      button{
+      button {
         padding: 0;
         background-color: transparent;
         border: none;
@@ -1486,16 +1490,16 @@ body {
         font-size: 14px;
       }
     }
-    .department__form-tel, .department__form-mail{
-      .el-form-item{
+    .department__form-tel, .department__form-mail {
+      .el-form-item {
         margin-bottom: 0;
       }
     }
-    .contentInfo__time{
+    .contentInfo__time {
       margin-right: 10px;
     }
-    .form__tel-titles{
-      .form__tel-title{
+    .form__tel-titles {
+      .form__tel-title {
         font-size: 13px;
         font-weight: normal;
         color: #606266;
@@ -1503,17 +1507,17 @@ body {
       }
     }
   }
-  .contentInfo__newSite-form{
-    .el-select{
+  .contentInfo__newSite-form {
+    .el-select {
       width: 100%;
     }
-    .newSite__form-info{
+    .newSite__form-info {
       justify-content: space-between;
-      .el-form-item{
+      .el-form-item {
         flex-basis: calc(33.333% - 10px);
       }
     }
-    textarea{
+    textarea {
       height: 78px;
       border-radius: 4px;
       background-color: #ffffff;
@@ -1521,17 +1525,17 @@ body {
       resize: none;
     }
   }
-  .contentInfo__site-form{
-    .site__titles{
+  .contentInfo__site-form {
+    .site__titles {
       align-items: flex-end;
       margin-bottom: 10px;
-      .site__titles-title{
+      .site__titles-title {
         font-size: 14px;
         color: #409eff;
         font-weight: 600;
         text-transform: uppercase;
       }
-      button{
+      button {
         padding: 0;
         margin-left: 10px;
         border: none;
@@ -1539,13 +1543,13 @@ body {
         color: #888888;
       }
     }
-    .newSite__form-info{
+    .newSite__form-info {
       justify-content: space-between;
-      .el-form-item{
+      .el-form-item {
         flex-basis: calc(33.333% - 10px);
       }
     }
-    textarea{
+    textarea {
       border-radius: 4px;
       background-color: #ffffff;
       border: solid 1px #c0c4cc;
@@ -1553,15 +1557,15 @@ body {
     }
   }
   /*-----Сотрудники----*/
-  .adminContent__buttons{
+  .adminContent__buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
   }
-  .adminContent__buttons-search{
+  .adminContent__buttons-search {
     flex-basis: 40%;
-    input{
+    input {
       width: 100%;
     }
   }
@@ -1638,13 +1642,215 @@ body {
     margin-right: 20px;
   }
 
-  .el-table--enable-row-hover .el-table__body tr:hover>td{
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
     background-color: rgba(64, 158, 255, 0.05);
+  }
+
+  /*----LOGIN-----*/
+  .login-container {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background-color: #ebeef5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login {
+      width: 500px;
+      height: 500px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+    .login-title {
+      font-size: 22px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #161a24;
+      margin-bottom: 15px;
+    }
+    .login-text {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #161a24;
+      margin-bottom: 10px;
+    }
+    .el-form {
+      width: 100%;
+      .login__input-title {
+        font-size: 13px;
+        text-align: left;
+        color: #606266;
+        height: 20px;
+        line-height: 1.5;
+      }
+      input {
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .el-form-item:last-child {
+        margin-bottom: 30px;
+      }
+    }
+    .login-button {
+      width: 100%;
+      margin-bottom: 20px;
+      button {
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        border-radius: 4px;
+        background-color: #409eff;
+        width: 100%;
+      }
+    }
+    .login-forgot {
+      a {
+        font-size: 13px;
+        color: #c0c4cc;
+        text-decoration: none;
+        transition: 0.3s ease;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /*-----Справочник автомобилей------*/
+  .directory-row {
+    display: flex;
+    flex-grow: 2;
+  }
+  .directory {
+    flex-basis: 16.6666666%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #cccccc;
+    overflow: hidden;
+    flex-grow: 2;
+  }
+  .directory:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .directory:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .directory:not(:last-child) {
+    border-right: none;
+  }
+  .directory__titles {
+    padding: 10px 5px;
+    background-color: #ebeef5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 76px;
+  }
+  .directory__titles-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #303133;
+    text-transform: uppercase;
+  }
+  .directory__titles-button {
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: #303133;
+    font-size: 16px;
+  }
+  .directory__titles-search {
+    flex-basis: 100%;
+    margin-top: 5px;
+    input {
+      width: 100%;
+    }
+  }
+  .directory__column {
+    flex-grow: 2;
+    overflow-y: auto;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888888;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #cccccc;
+      cursor: pointer;
+    }
+  }
+  .directory__column-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    padding: 5px;
+    min-height: 24px;
+    .column__item-title {
+      font-size: 12px;
+      font-weight: normal;
+      color: #888888;
+    }
+    .column__item-button {
+      margin-left: auto;
+    }
+    button {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      i {
+        color: white;
+      }
+    }
+    &:hover, &:focus, &:active {
+      background-color: #ebeef5;
+      outline: none;
+      .column__item-title {
+      }
+      button {
+        i {
+          color: #888888;
+        }
+      }
+    }
+    &:focus, &:active {
+      background-color: #ebeef5;
+      .column__item-title {
+        color: #409eff;
+      }
+    }
+  }
+  .directory__pokolenie {
+    .directory__column-item {
+      min-height: 40px;
+    }
+  }
+  .directory-rowMobile {
+    display: none;
   }
 }
 
 /*----MEDIA----*/
-@media screen and (min-width: 992px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) and (max-width: 1450px) {
   .crm-container {
 
     .right__header {
@@ -1672,22 +1878,88 @@ body {
     .crmRight__options .el-collapse-item__content {
       flex-wrap: wrap;
     }
-    .crmRight__options{
-      .optionLeft, .optionCenter, .optionRight{
+    .crmRight__options {
+      .optionLeft, .optionCenter, .optionRight {
         flex-basis: calc(50% - 15px);
       }
     }
-    .crmRight__check .el-checkbox-group{
+    .crmRight__check .el-checkbox-group {
       flex-wrap: wrap;
     }
-    .el-checkbox + .el-checkbox{
+    .el-checkbox + .el-checkbox {
       margin-left: 0;
     }
-    .el-checkbox{
+    .el-checkbox {
       margin-right: 10px;
     }
   }
+  .admin-container {
+    .directory__pokolenie {
+      .directory__column-item {
+        min-height: 60px;
+      }
+    }
+    .directory__column-item {
+      min-height: 40px;
+    }
+    .contentInfo-salon {
+      .contentInfo__inputs {
+        .el-form-item, .contentInfo__time {
+          flex-basis: calc(50% - 15px);
+        }
+      }
+    }
+    .contentInfo__site-form {
+      .newSite__form-info {
+        .el-form-item {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+
 }
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .admin-container {
+    .contentInfo__site-form {
+      .newSite__form-info {
+        flex-wrap: wrap;
+        .el-form-item {
+          flex-basis: 100%;
+        }
+      }
+    }
+    .contentInfo__newSite-form {
+      .newSite__form-info {
+        flex-wrap: wrap;
+        .el-form-item {
+          flex-basis: 100%;
+        }
+      }
+    }
+    .newDepartment__form-mail, .newDepartment__form-tel {
+      flex-basis: 100%;
+    }
+    .contentInfo-salon {
+      .contentInfo__inputs {
+        .el-form-item {
+          flex-basis: calc(50% - 15px);
+        }
+      }
+    }
+    .contentInfo-salon {
+      .contentInfo__time {
+        flex-basis: 100%;
+      }
+    }
+    .department__form-mail, .department__form-tel{
+      flex-basis: 100%;
+    }
+  }
+
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .crm-container {
 
@@ -1709,7 +1981,7 @@ body {
           margin-left: 15px;
         }
       }
-      .rheader__top-message, .rheader__top-name{
+      .rheader__top-message, .rheader__top-name {
         font-size: 10px;
       }
     }
@@ -1719,12 +1991,12 @@ body {
     .crmRight__options .el-collapse-item__content {
       flex-wrap: wrap;
     }
-    .crmRight__options{
-      .optionLeft, .optionCenter, .optionRight{
+    .crmRight__options {
+      .optionLeft, .optionCenter, .optionRight {
         flex-basis: 100%;
       }
     }
-    .el-checkbox+.el-checkbox {
+    .el-checkbox + .el-checkbox {
       margin-left: 10px;
     }
     .crm__left {
@@ -1751,47 +2023,60 @@ body {
     .rheader__buttons-search {
       width: 150px;
     }
-    .crmRight__info-input{
+    .crmRight__info-input {
       flex-basis: 100%;
       margin-right: 0;
       margin-bottom: 10px;
     }
-    .crmRight__dopi-bittons{
+    .crmRight__dopi-bittons {
       flex-wrap: wrap;
-      button{
+      button {
         flex-basis: 100%;
         margin-left: 0;
         margin-bottom: 10px;
       }
     }
-    .crmRight__check .el-checkbox-group{
+    .crmRight__check .el-checkbox-group {
       flex-wrap: wrap;
     }
-    .el-checkbox + .el-checkbox{
+    .el-checkbox + .el-checkbox {
       margin-left: 0;
     }
-    .el-checkbox{
+    .el-checkbox {
       margin-right: 10px;
     }
   }
 }
+
 /*-----Меню-----*/
 @keyframes openLeft {
-  from {height: 0}
-  to {height: calc(100% - 50px);}
+  from {
+    height: 0
+  }
+  to {
+    height: calc(100% - 50px);
+  }
 }
+
 @keyframes closeLeft {
-  from {height: calc(100% - 50px);}
-  to {height: 0px;}
+  from {
+    height: calc(100% - 50px);
+  }
+  to {
+    height: 0px;
+  }
 }
-.admin__left-button{
+
+.admin__left-button {
   display: none;
 }
-.admin__left-buttons{
+
+.admin__left-buttons {
   display: none;
 }
-@media screen and (min-width: 768px) and (max-width: 991px){
-  .admin-container{
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .admin-container {
     .admin__left {
       z-index: 9999;
       position: absolute;
@@ -1804,26 +2089,26 @@ body {
       max-width: 100%;
       background-color: #303133;
       overflow: hidden;
-      .left__models{
+      .left__models {
         overflow: hidden;
       }
-      .admin__left-buttons{
+      .admin__left-buttons {
         display: flex;
         align-items: center;
-        padding:5px 15px;
+        padding: 5px 15px;
       }
     }
-    .adminLeftOver{
-      .left__models{
+    .adminLeftOver {
+      .left__models {
         overflow-y: auto;
       }
     }
-    .adminLeftClose{
-      animation: closeLeft  0.3s linear;
+    .adminLeftClose {
+      animation: closeLeft 0.3s linear;
       animation-fill-mode: forwards;
     }
-    .adminLeftOpen{
-      animation: openLeft  0.3s linear;
+    .adminLeftOpen {
+      animation: openLeft 0.3s linear;
       animation-fill-mode: forwards;
       &::-webkit-scrollbar {
         width: 4px;
@@ -1838,12 +2123,12 @@ body {
         cursor: pointer;
       }
     }
-    .adminLeftOver{
+    .adminLeftOver {
       overflow-y: auto;
     }
-    .admin__left-button{
+    .admin__left-button {
       display: block;
-      button{
+      button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1856,7 +2141,7 @@ body {
         color: white;
       }
     }
-    .right__header-top{
+    .right__header-top {
       display: none;
     }
     .right__header-buttons {
@@ -1867,24 +2152,111 @@ body {
       text-overflow: ellipsis;
       overflow: hidden;
     }
+    table{
+      font-size: 12px;
+    }
+    .admin__right {
+      .rheader__buttons-new {
+        background-color: transparent;
+        padding-right: 0;
+      }
+    }
+    .admin__left {
+      .admin__left-title {
+        display: none;
+      }
+      .admin__left-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #409eff;
+        height: 40px;
+        min-height: 40px;
+        color: white;
+        .admin__left-name {
+          color: white;
+          font-size: 16px;
+        }
+        .admin__left-button {
+          margin-left: auto;
+          color: white;
+          margin-right: 10px;
+          padding: 0;
+        }
+        .admin__left-exit {
+          padding: 5px;
+          color: white;
+          margin-right: 0;
+        }
+      }
+    }
+
+    /*-----Справочник------*/
+    .directory-row {
+      display: none;
+    }
+    .directory-rowMobile {
+      display: flex;
+      flex-grow: 2;
+      flex-direction: column;
+      .directory {
+        border-radius: 4px;
+      }
+      .el-tabs {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        flex-grow: 2;
+        .el-tabs__item {
+          font-size: 16px;
+          font-weight: 600;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        .el-tabs__item:focus.is-active.is-focus:not(:active) {
+          outline: none;
+          box-shadow: none;
+        }
+        .el-tabs__content {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 2;
+          overflow: hidden;
+          .el-tab-pane {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+            .directory__column-item {
+              min-height: 30px;
+              .column__item-title {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
 /*----Новый салон медиа----*/
-@media screen and (max-width: 1100px){
-  .adminContent-info{
-    .contentInfo__inputs{
+@media screen and (max-width: 1100px) {
+  .adminContent-info {
+    .contentInfo__inputs {
       flex-wrap: wrap;
     }
     .contentInfo__inputs {
       .el-form-item {
         flex-basis: 100%;
-        margin-right: 0!important;
+        margin-right: 0 !important;
       }
     }
-    .contentInfo-row{
+    .contentInfo-row {
       flex-wrap: wrap;
     }
-    .contentInfo__contacts, .contentInfo__credit{
+    .contentInfo__contacts, .contentInfo__credit {
       flex-basis: 100%;
     }
   }
