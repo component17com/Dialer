@@ -720,7 +720,7 @@ body {
     font-size: 14px;
     text-align: left;
     color: #303133;
-    width: 99%;
+    width: 100%;
     .has-gutter {
       tr {
         th {
@@ -1806,6 +1806,7 @@ body {
     transition: 0.3s ease;
     padding: 5px;
     min-height: 24px;
+    cursor: pointer;
     .column__item-title {
       font-size: 12px;
       font-weight: normal;
@@ -1841,6 +1842,7 @@ body {
     }
   }
   .directory__column-item-focus{
+    cursor: default;
     background-color: #ebeef5;
     .column__item-title {
       color: #409eff;
@@ -2056,6 +2058,15 @@ body {
     }
     .el-checkbox {
       margin-right: 10px;
+    }
+    .el-form{
+      .crmRight__reviewsEdit-textareas{
+        flex-wrap: wrap;
+        .el-form-item{
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+      }
     }
   }
 }
@@ -2364,6 +2375,18 @@ body {
         margin-right: 20px;
       }
     }
+    /*----Настройки-----*/
+    .crmRight__settings{
+      .crmRight__setting-limints, .crmRight__setting-other{
+        flex-basis: 100%;
+      }
+     .crmRight__setting-foto, .crmRight__setting-panel, .crmRight__setting-sale{
+       flex-basis: 100%;
+     }
+      .crmRight__setting-item{
+        flex-basis: 100%;
+      }
+    }
   }
 }
 
@@ -2389,5 +2412,10 @@ body {
 }
 
 .crmRight__tables {
-  width: 99%;
+  width: 100%;
+}
+.footer__saves{
+  button{
+    margin-right: 15px;
+  }
 }

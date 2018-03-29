@@ -2,7 +2,13 @@
   <div class="crm-container">
 
     <!--Левая колонка-->
-    <div class="crm__left">
+    <div :class="menuClass">
+      <div class="admin__left-buttons">
+        <div class="admin__left-name">АвтоЛидер Варшавка</div>
+        <el-button type="text" class="admin__left-button">Настройки</el-button>
+        |
+        <el-button type="text" class="admin__left-exit">Выйти</el-button>
+      </div>
       <div class="crm__left-title">Система управления <span>АвтоЛидер Варшавка</span></div>
       <div class="left__adverts">
         <div class="left__adverts-all">Все обьявления
@@ -35,6 +41,9 @@
           <el-button class="button-icon rheader__top-exit"><i class="mdi mdi-exit-to-app"></i></el-button>
         </div>
         <div class="right__header-buttons">
+          <div class="admin__left-button">
+            <el-button @click="adminChange()"><i class="mdi mdi-menu"></i></el-button>
+          </div>
           <el-button class="rheader__button rheader__buttons-archive" title="Архив (кол-во)">
             <i class="mdi mdi-delete"></i>
             <div class="rheader__button-text">Архив</div>
@@ -143,17 +152,11 @@
       </div>
       <!--Подвал правой колонки-->
       <div class="crmRight__footer">
-        <div class="footer__pagination">
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page.sync="currentPage4"
-            :page-sizes="[100, 200, 300, 400]"
-            :page-size="100"
-            layout="slot, sizes, prev, pager, next"
-            :total="400">
-            <template slot>Показать по</template>
-          </el-pagination>
+        <div class="footer__saves">
+          <el-button type="primary">Сохранить</el-button>
+        </div>
+        <div class="footer__cancel">
+          <el-button>Отмена</el-button>
         </div>
         <div class="footer__up">
           <el-button><i class="mdi mdi-arrow-up"></i></el-button>
@@ -165,8 +168,31 @@
 
 <script>
   export default {
+    data() {
+      return {
+        menuClass: 'crm__left',
+        adminLeftOpen: false,
+        isCollapse: true,
+      };
+    },
+    methods: {
+      adminChange(){
+        const TIMEOUT = 400;
 
-  }
+        if(this.adminLeftOpen){
+          this.menuClass = 'crm__left adminLeftClose'
+          this.adminLeftOpen = false;
+
+        }else{
+          this.menuClass = 'crm__left adminLeftOpen'
+          setTimeout(() => {
+            this.menuClass = 'crm__left adminLeftOpen adminLeftOver'
+            this.adminLeftOpen = true;
+          }, TIMEOUT);
+        }
+      }
+    },
+  };
 </script>
 
 <style lang="scss">

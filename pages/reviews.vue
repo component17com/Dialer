@@ -2,7 +2,13 @@
   <div class="crm-container">
 
     <!--Левая колонка-->
-    <div class="crm__left">
+    <div :class="menuClass">
+      <div class="admin__left-buttons">
+        <div class="admin__left-name">АвтоЛидер Варшавка</div>
+        <el-button type="text" class="admin__left-button">Настройки</el-button>
+        |
+        <el-button type="text" class="admin__left-exit">Выйти</el-button>
+      </div>
       <div class="crm__left-title">Система управления <span>АвтоЛидер Варшавка</span></div>
       <div class="left__adverts">
         <div class="left__adverts-all">Все обьявления
@@ -35,6 +41,9 @@
           <el-button class="button-icon rheader__top-exit"><i class="mdi mdi-exit-to-app"></i></el-button>
         </div>
         <div class="right__header-buttons">
+          <div class="admin__left-button">
+            <el-button @click="adminChange()"><i class="mdi mdi-menu"></i></el-button>
+          </div>
           <el-button class="rheader__button rheader__buttons-archive" title="Архив (кол-во)">
             <i class="mdi mdi-delete"></i>
             <div class="rheader__button-text">Архив</div>
@@ -148,7 +157,8 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Текст">
+              label="Текст"
+            min-width="500px">
               <template slot-scope="scope">
                 <div class="crmTable-auto">Приобретенный автомобиль: {{ scope.row.auto }}</div>
                 <div class="crmTable__text">{{ scope.row.text }}</div>
@@ -337,10 +347,29 @@
             name: 'Светлана Николаевна',
             auto: 'не указано',
             text: 'От посещения автосалона у меня остались лишь положительные эмоции. Увидел их салон на авито, там они с 2014 года, и это уже о чем-то говорит.',
-          }],
+          }]
+        ,menuClass: 'crm__left',
+        adminLeftOpen: false,
+        isCollapse: true,
+    };
+    },
+    methods: {
+      adminChange(){
+        const TIMEOUT = 400;
 
-      };
-    }
+        if(this.adminLeftOpen){
+          this.menuClass = 'crm__left adminLeftClose'
+          this.adminLeftOpen = false;
+
+        }else{
+          this.menuClass = 'crm__left adminLeftOpen'
+          setTimeout(() => {
+            this.menuClass = 'crm__left adminLeftOpen adminLeftOver'
+            this.adminLeftOpen = true;
+          }, TIMEOUT);
+        }
+      }
+    },
   };
 </script>
 

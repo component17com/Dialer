@@ -114,6 +114,12 @@
         <div class="crmRight__title">
           <div class="crmRight__title-text">Все объявления</div>
         </div>
+        <div class="crmRight__buttons">
+          <el-button type="text">Всего (584)</el-button>
+          <el-button type="text">Только на сайте (142)</el-button>
+          <el-button type="text">Auto.ru (99)</el-button>
+          <el-button type="text">Avito.ru (245)</el-button>
+        </div>
         <div class="crmRight__tables">
           <el-table
             :data="tableData"
@@ -297,7 +303,6 @@
     display: flex;
     align-items: center;
   }
-
   .crmTable-modelColorHEX {
     width: 15px;
     height: 15px;
@@ -309,5 +314,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .crmRight__buttons{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #dddddd;
+    margin-bottom: 15px;
+    button{
+      font-size: 14px;
+      font-weight: 600;
+      color: #161a24;
+      position: relative;
+      margin-right: 40px;
+      &:focus::before{
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        background-color: #409eff;
+        height: 2px;
+      }
+    }
   }
 </style>
