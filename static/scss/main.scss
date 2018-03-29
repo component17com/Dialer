@@ -1840,6 +1840,17 @@ body {
       }
     }
   }
+  .directory__column-item-focus{
+    background-color: #ebeef5;
+    .column__item-title {
+      color: #409eff;
+    }
+    button {
+      i {
+        color: #888888;
+      }
+    }
+  }
   .directory__pokolenie {
     .directory__column-item {
       min-height: 40px;
@@ -1954,7 +1965,7 @@ body {
         flex-basis: 100%;
       }
     }
-    .department__form-mail, .department__form-tel{
+    .department__form-mail, .department__form-tel {
       flex-basis: 100%;
     }
   }
@@ -2153,7 +2164,7 @@ body {
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    table{
+    table {
       font-size: 12px;
       outline: none;
     }
@@ -2241,7 +2252,7 @@ body {
       }
     }
   }
-  .crm-container{
+  .crm-container {
     .crm__left {
       z-index: 9999;
       position: absolute;
@@ -2337,14 +2348,20 @@ body {
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    .crm__left-title{
+    .crm__left-title {
       display: none;
     }
 
     /*----Все обьявления-----*/
-    .crmRight{
-      table{
+    .crmRight {
+      table {
         font-size: 12px;
+      }
+    }
+    .crmRight__selects {
+      .crmRight__selects-marks, .crmRight__selects-models {
+        flex-basis: calc(50% - 20px);
+        margin-right: 20px;
       }
     }
   }
@@ -2370,6 +2387,7 @@ body {
     }
   }
 }
-.crmRight__tables{
+
+.crmRight__tables {
   width: 99%;
 }

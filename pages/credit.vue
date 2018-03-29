@@ -144,13 +144,15 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Марка / Модель">
+              label="Марка / Модель"
+            min-width="200px">
               <template slot-scope="scope">
                 <div class="crmTable-model">{{ scope.row.model}} <span>{{ scope.row.year}}</span></div>
               </template>
             </el-table-column>
             <el-table-column
-              label="Покупатель">
+              label="Покупатель"
+            min-width="250px">
               <template slot-scope="scope">
                 <div class="crmTable-year">{{ scope.row.name}}</div>
                 <div class="crmTable-volume">{{ scope.row.city}}</div>

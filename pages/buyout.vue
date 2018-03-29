@@ -2,7 +2,13 @@
   <div class="crm-container">
 
     <!--Левая колонка-->
-    <div class="crm__left">
+    <div :class="menuClass">
+      <div class="admin__left-buttons">
+        <div class="admin__left-name">АвтоЛидер Варшавка</div>
+        <el-button type="text" class="admin__left-button">Настройки</el-button>
+        |
+        <el-button type="text" class="admin__left-exit">Выйти</el-button>
+      </div>
       <div class="crm__left-title">Система управления <span>АвтоЛидер Варшавка</span></div>
       <div class="left__adverts">
         <div class="left__adverts-all">Все обьявления
@@ -35,6 +41,9 @@
           <el-button class="button-icon rheader__top-exit"><i class="mdi mdi-exit-to-app"></i></el-button>
         </div>
         <div class="right__header-buttons">
+          <div class="admin__left-button">
+            <el-button @click="adminChange()"><i class="mdi mdi-menu"></i></el-button>
+          </div>
           <el-button class="rheader__button rheader__buttons-archive" title="Архив (кол-во)">
             <i class="mdi mdi-delete"></i>
             <div class="rheader__button-text">Архив</div>
@@ -144,13 +153,15 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Марка / Модель">
+              label="Марка / Модель"
+            min-width="200px">
               <template slot-scope="scope">
                 <div class="crmTable-model">{{ scope.row.model}}</div>
               </template>
             </el-table-column>
             <el-table-column
-              label="Год / Объем см3 / КПП">
+              label="Год / Объем см3 / КПП"
+              min-width="250px">
               <template slot-scope="scope">
                 <div class="crmTable-year">{{ scope.row.year}}</div>
                 <div class="crmTable-volume">{{ scope.row.volume}}</div>
@@ -158,7 +169,8 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Контакты">
+              label="Контакты"
+            min-width="150px">
               <template slot-scope="scope">
                 <div class="crmTable-year">{{ scope.row.phone}}</div>
               </template>
@@ -226,10 +238,29 @@
           volume: '1596 см3',
           kpp: 'Автомат робот',
           phone: '+7 (999) 999-9999',
-        }],
+        }],menuClass: 'crm__left',
+        adminLeftOpen: false,
+        isCollapse: true,
 
       };
-    }
+    },
+    methods: {
+      adminChange(){
+        const TIMEOUT = 400;
+
+        if(this.adminLeftOpen){
+          this.menuClass = 'crm__left adminLeftClose'
+          this.adminLeftOpen = false;
+
+        }else{
+          this.menuClass = 'crm__left adminLeftOpen'
+          setTimeout(() => {
+            this.menuClass = 'crm__left adminLeftOpen adminLeftOver'
+            this.adminLeftOpen = true;
+          }, TIMEOUT);
+        }
+      }
+    },
   };
 </script>
 
