@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="left__models">
-        <nuxt-link to="" class="left__model" v-for="item in 70" :key="item">Audi
+        <nuxt-link to="" class="left__model" v-for="item in 7" :key="item">Audi
           <el-badge class="crm-tag" :value="4"/>
         </nuxt-link>
         <nuxt-link to="" class="left__model">Bmw
@@ -185,7 +185,7 @@
               </template>
             </el-table-column>
             <el-table-column
-              label="Удалить"
+              label="Действия"
               align="center"
               width="120px">
               <template slot-scope="scope">
@@ -248,6 +248,7 @@
           date: '09.12.2017',
           dateRef:'365',
           site: 'auto.ru',
+          year:'2016',
         }, {
           id: '999999',
           photo: './img/scoda.jpg',
@@ -263,6 +264,7 @@
           date: '09.12.2017',
           dateRef:'365',
           site: 'avito.ru',
+          year:'2016',
         }],
         menuClass: 'crm__left',
         adminLeftOpen: false,
@@ -299,42 +301,5 @@
 </script>
 
 <style lang="scss">
-  .crmTable-modelColor {
-    display: flex;
-    align-items: center;
-  }
-  .crmTable-modelColorHEX {
-    width: 15px;
-    height: 15px;
-    border: 1px solid;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .crmTable-buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .crmRight__buttons{
-    display: flex;
-    align-items: center;
-    border-bottom: solid 2px #dddddd;
-    margin-bottom: 15px;
-    button{
-      font-size: 14px;
-      font-weight: 600;
-      color: #161a24;
-      position: relative;
-      margin-right: 40px;
-      &:focus::before{
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        right: 0;
-        background-color: #409eff;
-        height: 2px;
-      }
-    }
-  }
+
 </style>

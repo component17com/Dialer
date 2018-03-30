@@ -199,6 +199,7 @@
   .crmRight__reviewsEdit-status{
     display: flex;
     align-items: center;
+    margin-top: 15px;
     .status__verified{
       border-radius: 3px;
       background-color: #67c23a;
@@ -277,6 +278,7 @@
   }
   .collapse__image-upload{
     .image-uploader-title{
+      margin-top: 20px;
       font-size: 13px;
       color: #606266;
       margin-bottom: 10px;

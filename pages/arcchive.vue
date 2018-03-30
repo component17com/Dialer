@@ -112,7 +112,7 @@
       <!--Контент правой колонки-->
       <div class="crmRight">
         <div class="crmRight__title">
-          <div class="crmRight__title-text">Все объявления</div>
+          <div class="crmRight__title-text">Архив объявлений</div>
         </div>
         <div class="crmRight__selects">
           <div class="crmRight__selects-marks">
@@ -262,6 +262,7 @@
           phone: '+7 (999) 999-9999',
           date: '09.12.2017',
           dateDelete:'09.01.2018',
+          year: '2016',
         }, {
           id: '999999',
           photo: './img/scoda.jpg',
@@ -276,6 +277,7 @@
           phone: '+7 (999) 999-9999',
           date: '09.12.2017',
           dateDelete:'09.01.2018',
+          year: '2016',
         }],
         options: [{
           value: 'Option1',
@@ -328,38 +330,5 @@
 </script>
 
 <style lang="scss">
-  .crmTable-modelColor {
-    display: flex;
-    align-items: center;
-  }
 
-  .crmTable-modelColorHEX {
-    width: 15px;
-    height: 15px;
-    border: 1px solid;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .crmTable-buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .crmRight__selects{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    .crmRight__selects-marks, .crmRight__selects-models{
-      flex-basis: calc(25% - 20px);
-      margin-right: 20px;
-      .el-select{
-        width: 100%;
-      }
-      .marks-title, .models-title{
-        font-size: 14px;
-        margin-bottom: 5px;
-        font-weight: 500;
-      }
-    }
-  }
 </style>

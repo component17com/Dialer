@@ -113,6 +113,7 @@ body {
   }
   .crmRight__check {
     margin-bottom: 10px;
+    margin-top: 10px;
     .el-checkbox-group {
       display: flex;
     }
@@ -313,7 +314,7 @@ body {
     letter-spacing: normal;
     text-align: left;
     color: #161a24;
-    min-height: 40px;
+    min-height: 25px;
     button {
       border: none;
       background-color: transparent;
@@ -326,6 +327,10 @@ body {
       font-stretch: normal;
       letter-spacing: normal;
       color: #8c939d;
+      transition: 0.3s ease;
+      &:hover, &:focus, &:active{
+        color: #161a24;
+      }
       .mdi {
         margin-right: 5px;
       }
@@ -666,6 +671,9 @@ body {
         font-weight: 600;
         color: #ffffff;
         border: none;
+        &:hover, &:focus, &:active{
+          background: #66b1ff;
+        }
       }
     }
     .footer__cancel {
@@ -898,6 +906,183 @@ body {
   .crmTable__foto-img {
     width: 100%;
     height: 100%;
+  }
+
+  /*----Все обьявления-----*/
+  .crmTable-modelColor {
+    display: flex;
+    align-items: center;
+  }
+  .crmTable-modelColorHEX {
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .crmTable-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .crmRight__buttons{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #dddddd;
+    button{
+      font-size: 14px;
+      font-weight: 600;
+      color: #161a24;
+      position: relative;
+      margin-right: 40px;
+      &:focus, &:active{
+        color: #409eff;
+      }
+      &:focus::before, &:active::before, &:hover::before{
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        background-color: #409eff;
+        height: 2px;
+      }
+    }
+  }
+  .crmTable__salePrice{
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .crmTable-site{
+    font-size: 14px;
+    font-weight: 600;
+    color: #303133;
+    text-decoration: none;
+  }
+  /*----Архив----*/
+  .crmTable-modelColor {
+    display: flex;
+    align-items: center;
+  }
+  .crmTable-modelColorHEX {
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .crmTable-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .crmRight__selects{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    .crmRight__selects-marks, .crmRight__selects-models{
+      flex-basis: calc(25% - 20px);
+      margin-right: 20px;
+      .el-select{
+        width: 100%;
+      }
+      .marks-title, .models-title{
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  /*---Отзывы----*/
+  .crmRight__date{
+    margin-top: 15px;
+  }
+}
+
+/*----LOGIN-----*/
+.login-container {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  background-color: #ebeef5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login {
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .login-title {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #161a24;
+    margin-bottom: 15px;
+  }
+  .login-text {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #161a24;
+    margin-bottom: 10px;
+  }
+  .el-form {
+    width: 100%;
+    .login__input-title {
+      font-size: 13px;
+      text-align: left;
+      color: #606266;
+      height: 20px;
+      line-height: 1.5;
+    }
+    input {
+      width: 100%;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .el-form-item:last-child {
+      margin-bottom: 30px;
+    }
+  }
+  .login-button {
+    width: 100%;
+    margin-bottom: 20px;
+    button {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      border-radius: 4px;
+      background-color: #409eff;
+      width: 100%;
+      border: none;
+      transition: 0.3s ease;
+      &:hover, &:active, &:focus{
+        background: #66b1ff;
+      }
+    }
+  }
+  .login-forgot {
+    a {
+      font-size: 13px;
+      color: #c0c4cc;
+      text-decoration: none;
+      transition: 0.3s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -1647,85 +1832,7 @@ body {
     background-color: rgba(64, 158, 255, 0.05);
   }
 
-  /*----LOGIN-----*/
-  .login-container {
-    font-family: 'Open Sans', sans-serif;
-    height: 100vh;
-    background-color: #ebeef5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .login {
-      width: 500px;
-      height: 500px;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-    }
-    .login-title {
-      font-size: 22px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      letter-spacing: normal;
-      text-align: left;
-      color: #161a24;
-      margin-bottom: 15px;
-    }
-    .login-text {
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      letter-spacing: normal;
-      text-align: left;
-      color: #161a24;
-      margin-bottom: 10px;
-    }
-    .el-form {
-      width: 100%;
-      .login__input-title {
-        font-size: 13px;
-        text-align: left;
-        color: #606266;
-        height: 20px;
-        line-height: 1.5;
-      }
-      input {
-        width: 100%;
-        font-family: 'Open Sans', sans-serif;
-      }
-      .el-form-item:last-child {
-        margin-bottom: 30px;
-      }
-    }
-    .login-button {
-      width: 100%;
-      margin-bottom: 20px;
-      button {
-        font-size: 14px;
-        font-weight: 600;
-        color: #ffffff;
-        border-radius: 4px;
-        background-color: #409eff;
-        width: 100%;
-      }
-    }
-    .login-forgot {
-      a {
-        font-size: 13px;
-        color: #c0c4cc;
-        text-decoration: none;
-        transition: 0.3s ease;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
+
 
   /*-----Справочник автомобилей------*/
   .directory-row {
@@ -1861,6 +1968,7 @@ body {
   .directory-rowMobile {
     display: none;
   }
+
 }
 
 /*----MEDIA----*/
@@ -2418,4 +2526,7 @@ body {
   button{
     margin-right: 15px;
   }
+}
+.el-table .cell{
+  word-break: normal!important;
 }

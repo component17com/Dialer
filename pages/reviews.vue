@@ -123,7 +123,8 @@
             start-placeholder="Начальная дата"
             end-placeholder="Конечная дата"
             :picker-options="pickerOptions2"
-            size="small">
+            size="small"
+            format="dd/MM/yyyy">
           </el-date-picker>
           <el-button size="small" type="primary">Поиск</el-button>
         </div>

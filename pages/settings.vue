@@ -112,7 +112,7 @@
       <!--Контент правой колонки-->
       <div class="crmRight">
         <div class="crmRight__title">
-          <div class="crmRight__title-text">Настройки</div>
+          <div class="crmRight__title-text" style="margin-bottom: 15px">Настройки</div>
           <el-button class="crmRight__title-close" type="primary"><i class="mdi mdi-close"></i></el-button>
         </div>
         <div class="crmRight__settings">
