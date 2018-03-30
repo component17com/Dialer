@@ -1,39 +1,6 @@
 <template>
   <div class="admin-container">
-    <div :class="menuClass">
-      <div class="admin__left-menu">
-        <div class="admin__left-buttons">
-          <div class="admin__left-name">Перов Иван (админитстратор)</div>
-          <el-button class="admin__left-setting">Настройки</el-button>
-          <el-button class="admin__left-exit">Выйти</el-button>
-        </div>
-        <div class="admin__left-title">Администрирование<br><span>АвтоЛидер</span></div>
-      <div class="left__models">
-        <nuxt-link to="" class="left__model" v-for="item in 70" :key="item">Автосалоны</nuxt-link>
-        <nuxt-link to="" class="left__model">Сотрудники</nuxt-link>
-        <nuxt-link to="" class="left__model">Справочник атомобилей</nuxt-link>
-      </div>
-      </div>
-    </div>
-
-    <div class="admin__right">
-      <div class="right__header-top">
-        <div class="rheader__top-name">Перов Иван (админитстратор)</div>
-        <el-button class="button-icon rheader__top-button"><i class="mdi mdi-settings"></i></el-button>
-        <el-button class="button-icon rheader__top-exit"><i class="mdi mdi-exit-to-app"></i></el-button>
-      </div>
-      <div class="right__header-buttons">
-        <div class="admin__left-button">
-          <el-button @click="adminChange()"><i class="mdi mdi-menu"></i></el-button>
-        </div>
-        <div class="right__header-title">Автосалоны</div>
-        <el-button class="rheader__buttons-new" size="small"><i class="mdi mdi-plus"></i>Добавить автосалон</el-button>
-      </div>
-      <div class="adminContent">
-        22
-      </div>
-
-    </div>
+    <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
   </div>
 </template>
 
@@ -41,31 +8,65 @@
   export default {
     data() {
       return {
-        menuClass: 'admin__left',
-        adminLeftOpen: false,
-      }
+        data: [{
+          label: 'Level one 1',
+          children: [{
+            label: 'Level two 1-1',
+            children: [{
+              label: 'Level three 1-1-1'
+            }]
+          }]
+        }, {
+          label: 'Level one 2',
+          children: [{
+            label: 'Level two 2-1',
+            children: [{
+              label: 'Level three 2-1-1'
+            }]
+          }, {
+            label: 'Level two 2-2',
+            children: [{
+              label: 'Level three 2-2-1'
+            }]
+          }]
+        }, {
+          label: 'Level one 3',
+          children: [{
+            label: 'Level two 3-1',
+            children: [{
+              label: 'Level three 3-1-1'
+            }]
+          }, {
+            label: 'Level two 3-2',
+            children: [{
+              label: 'Level three 3-2-1'
+            }]
+          }]
+        }],
+        defaultProps: {
+          children: 'children',
+          label: 'label'
+        }
+      };
     },
     methods: {
-      adminChange(){
-        const TIMEOUT = 400;
-
-        if(this.adminLeftOpen){
-          this.menuClass = 'admin__left adminLeftClose'
-          this.adminLeftOpen = false;
-
-        }else{
-          this.menuClass = 'admin__left adminLeftOpen'
-          setTimeout(() => {
-            this.menuClass = 'admin__left adminLeftOpen adminLeftOver'
-            this.adminLeftOpen = true;
-          }, TIMEOUT);
-        }
+      handleNodeClick(data) {
+        console.log(data);
       }
     }
-  }
+  };
 </script>
 
 <style lang="scss">
+  .expanded{
+    .el-icon-caret-right:before{
+      content: "\002D";
+    }
+  }
+  .el-icon-caret-right:before{
+    content: "\002B";
+  }
+
   @keyframes openLeft {
     from {height: 0}
     to {height: calc(100% - 50px);}
@@ -73,12 +74,6 @@
   @keyframes closeLeft {
     from {height: calc(100% - 50px);}
     to {height: 0px;}
-  }
-  .admin__left-button{
-    display: none;
-  }
-  .admin__left-buttons{
-    display: none;
   }
   @media screen and (min-width: 768px) and (max-width: 991px){
     .admin-container{
